@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
     <title>Songs</title>
 </head>
 <body>
     <header>
-    <h1>Welcome to the oasis of songs</h1>
+    <h1>AI Music Generator</h1>
+    <h2>Welcome to the oasis of songs</h2>
     </header>
     <main>
+        <div class="container">
         <form>
-            <input type="text" placeholder="Enter song title or artist" autofocus required autocomplete="off" />
-            <input type="submit"/>
+            <input type="text" placeholder="Enter song title or artist" autofocus required autocomplete="off" class="input" />
+            <input type="submit" class="command"/>
         </form>
-        <div>
+        <div class="song">
             song
             <br />
             song
@@ -26,5 +29,6 @@
         <a href="https://github.com/CHERYL-8/Plus-AI" target="_blank">GitHub and</a>
         <a href="https://obioma-song-oasis.netlify.app/" target="_blank">hosted on Netlify</a>
     </footer>
+    </div>
 </body>
 </html>
