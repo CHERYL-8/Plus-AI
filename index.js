@@ -15,7 +15,6 @@ function generateSong(event) {
     let context = "you are a creative and an excellent song composer,generate a song that has a verse and a chorus,the lyrics of the song should be in a seperate line,make sure to follow the user instructions,sign 'Ugwueze Obioma AI' at the end of the song in italics using the color code #ff4d00";
     let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
     axios.get(apiUrl).then(showSong);
-
 }
 let inputForm = document.querySelector("#songForm");
 inputForm.addEventListener("submit",generateSong);
