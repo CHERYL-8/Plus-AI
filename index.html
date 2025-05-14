@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="style.css"/>
     <title>Songs</title>
 </head>
@@ -13,14 +14,11 @@
     </header>
     <main>
         <div class="container">
-        <form>
+        <form id="songForm">
             <input type="text" placeholder="Enter song title or artist" autofocus required autocomplete="off" class="input" />
             <input type="submit" class="command"/>
         </form>
-        <div class="song">
-            song
-            <br />
-            song
+        <div class="song" id="song">
         </div>
     </main>
     <footer>
@@ -30,5 +28,6 @@
         <a href="https://obioma-song-oasis.netlify.app/" target="_blank">hosted on Netlify</a>
     </footer>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
