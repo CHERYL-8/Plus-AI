@@ -1,4 +1,5 @@
 function showSong(response) {
+    console.log(response);
     new Typewriter("#song", {
        strings: response.data.answer,
        autoStart: true,
