@@ -8,7 +8,6 @@ a {
     color:#ff4d00;
 }
 .container{
-    background-color: grey;
     margin: 120px auto;
     max-width: 600px;
 }
@@ -23,13 +22,22 @@ header{
     margin-bottom: 30px;
 }
 form{
-    padding: 30px;
+    display: flex;
+}
+.form-container{
+    padding: 15px 20px;
     background-color: white;
     border-radius: 10px;
-    display: flex;
     box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
     margin-bottom: 30px;
 }
+.ideas{
+    line-height:1.5;
+    margin-top: 5px;
+    opacity: 0.6;
+    font-size:12px;
+}
+
 .input {
     padding: 16px;
     border: 1px solid #ff4d00;
@@ -48,6 +56,10 @@ form{
     font:16px;
     width: 150px;
 }
+.hidden{
+  display: none;
+
+}
 .song {
     font-size: 16px;
     background-color: white;
@@ -62,4 +74,18 @@ footer{
     color: #f5f5f5;
     margin-top: 30px;
 
+}
+.processing {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
