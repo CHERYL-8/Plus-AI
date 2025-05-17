@@ -16,7 +16,7 @@ function generateSong(event) {
     let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`; 
     
     let songElement = document.querySelector("song");
-    songElement.classList.remove("hidden");
+    songElement.classList.remove(".hidden");
     songElement.innerHTML = `<div class="processing">⌛Generating the song about ${user.value}</div>`
     axios.get(apiUrl).then(showSong);
 }
