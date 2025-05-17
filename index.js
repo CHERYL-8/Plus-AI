@@ -15,8 +15,8 @@ function generateSong(event) {
     let context = ("you are a creative and an excellent song composer.generate a song in basic html.seperate using <br/>.the song should have a chorus.make sure to follow the user input.sign 'Ugwueze Obioma AI' at the end of the song in italics using the color code #ff4d00.");
     let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`; 
     
-    let songElement = document.querySelector("song");
-    songElement.classList.remove(".hidden");
+    let songElement = document.querySelector("#song");
+    songElement.classList.remove("hidden");
     songElement.innerHTML = `<div class="processing">⌛Generating the song about ${user.value}</div>`
     axios.get(apiUrl).then(showSong);
 }
