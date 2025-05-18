@@ -21,5 +21,11 @@ function generateSong(event) {
     songElement.classList.remove("hidden");
     songElement.innerHTML = `<div class="processing">⌛Generating the song about ${user.value}</div>`
    
-    axios.get(apiUrl).then(showSong);
+        fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => showSong(data))
+        .catch(error => {
+            console.error('Error:', error);
+            songElement.innerHTML = "<div class='error'>Failed to generate song. Please try again.</div>"; // Display error
+        });
 }
