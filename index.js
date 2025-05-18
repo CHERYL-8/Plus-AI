@@ -6,6 +6,8 @@ function showSong(response) {
        cursor: "",
     });  
 }
+let formElement = document.querySelector("#song-form");
+formElement.addEventListener("submit",generateSong);
 
 function generateSong(event) {
     event.preventDefault();
@@ -18,7 +20,6 @@ function generateSong(event) {
     let songElement = document.querySelector("#song");
     songElement.classList.remove("hidden");
     songElement.innerHTML = `<div class="processing">⌛Generating the song about ${user.value}</div>`
+   
     axios.get(apiUrl).then(showSong);
 }
-let formElement = document.querySelector("#song-form");
-formElement.addEventListener("submit",generateSong);
