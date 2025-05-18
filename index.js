@@ -21,13 +21,5 @@ function generateSong(event) {
     songElement.classList.remove("hidden");
     songElement.innerHTML = `<div class="processing">⌛Generating the song about ${user.value}</div>`
    
-       axios.post('https://api.shecodes.io/ai/v1/generate', {
-        prompt: prompt,
-        context: context,
-        key: apiKey
-    })
-    .then(showSong)
-    .catch(error => {
-        console.error('Error generating song:', error);
-    }); 
+    axios.get(apiUrl).then(showSong);
 }
