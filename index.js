@@ -23,7 +23,7 @@ function generate(event) {
 
   let songElement = document.querySelector("#song");
 	songElement.classList.remove("hidden");
-  songElement.innerHTML = `<div class="processing">⏳ Generating a poem about ${user.value}..</div>`;
+  songElement.innerHTML = `<div class="processing">⏳ Generating a song about ${user.value}..</div>`;
   axios.get(apiUrl).then(showSong);
 }
 
