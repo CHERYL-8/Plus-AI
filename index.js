@@ -23,7 +23,14 @@ function generate(event) {
   let songElement = document.querySelector("#song");
 	songElement.classList.remove("hidden");
   songElement.innerHTML = `<div class="processing">⏳ Generating a song about ${user.value}..</div>`;
-  axios.get(apiUrl).then(showSong);
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => showSong(data))
+        .catch(error => {
+            console.error("Error fetching song:", error);
+            songElement.innerHTML = "<div class='error'>Failed to generate song. Please try again.</div>"; // Error handling
+        });
+
 }
 
 let formElement = document.querySelector("#song-form");
